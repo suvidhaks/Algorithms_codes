@@ -10,7 +10,11 @@ the first outer loop runs for n/2 elements every iterartion till it becomes zero
 e.g if N=10 ;
 (10/2=5); (5/2=2) ; (2/2=1); (1/2=0); (zero means there are no more elements to compare)
 so first outer loop runs for every n/2 elements until it becomes zero
- for(mid=n/2;mid>0;mid/=2)  ---------------->runs for every n/2 elements till it becomes 0
+ for(mid=n/2;mid>0;mid/=2)  ---------------->in first iteration n is divided into two elements n/2 and n/2 with equal no. ofelements on both sides
+ in second iteration n/2 is divided by 2: it becomes n/4 so the total no. of comparisions will be more it will be n=n-n/4 comparisons
+ e.g: n=10, 10/2=5; (left 5 elements are compared with right five elements including mid) ; (5/2=2) mid=2; when mid=2, the total no. of comparisons will be
+ n=n-mid including mid i,e  n=8-2=6; when mid=1 i,e 2/2=1 each element of i is checked with all the previous elemets of j; e.g i-mid will give the location of left
+ tree;
  for(i=mid;i<n;i++)  --------------> value of i is set to mid this loop iterates for the rightmost elements after mid
  for(j=i-mid;j>=0 && v[j]>v[j+mid];j-=mid) -------------->  this  loop iterates for the left most elements  before mid
  for every one iteration of i loop
@@ -21,15 +25,16 @@ so first outer loop runs for every n/2 elements until it becomes zero
  for(i=mid;i<n;i++)
  mid=2; i is set to mid i,e i=2; n=5; 
   for(j=i-mid;j>=0 && v[j]>v[j+mid];j-=mid)
-  now, j=2-2=0
-  j=0 
-  now condition is checked if (a[j]>a[j+mid]) which means for every one element 
+  now, j=[2-2]=0;
+  v[j] gives the location of left tree and v[j+mid] gives the location of right tree.
+  
+  j=0; now condition is checked if (a[j]>a[j+mid]) which means for every one element 
   in the left side of mid is checked with exactly one element of the rightside of mid
   first time when the loop starts a[0] is compared with a[mid] if a[0]>a[mid] it is swapped 
   similary
   a[1] is compared with a[3]
   a[2] is compared with a[4]
-  if the number of elements are odd low=0 is compared with a[mid] && high=n-1 is also compared with a[mid] 
+  if the number of elements are odd low=0 is compared with a[mid] && high=n-1 is also compared with a[mid] during the first iteration i,e when mid=n/2;
 
 bubble sorting is implemented in the function void sort(int [], int); 
 one can compare both the algorithms in terms of no.of iterations
