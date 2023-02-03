@@ -18,7 +18,7 @@ so first outer loop runs for every n/2 elements until it becomes zero
  for(i=mid;i<n;i++)  --------------> value of i is set to mid this loop iterates for the rightmost elements after mid
  for(j=i-mid;j>=0 && v[j]>v[j+mid];j-=mid) -------------->  this  loop iterates for the left most elements  before mid
  for every one iteration of i loop
- j also iterates only once.
+ j also iterates only once for the first iteration of the outermost for loop i,e n=n/2.
  for N=5;
  e.g: a[0], a[1], a[2], a[3], a[4]
  mid=(0+4)/2=2;
