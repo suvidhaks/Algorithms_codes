@@ -14,7 +14,8 @@ so first outer loop runs for every n/2 elements until it becomes zero
  in second iteration n/2 is divided by 2: it becomes n/4 so the total no. of comparisions will be more it will be n=n-n/4 comparisons
  e.g: n=10, 10/2=5; (left 5 elements are compared with right five elements including mid) ; (5/2=2) mid=2; when mid=2, the total no. of comparisons will be
  n=n-mid including mid i,e  n=8-2=6; when mid=1 i,e 2/2=1 each element of i is checked with all the previous elemets of j; e.g i-mid will give the location of left
- tree;
+ tree; when mid becomes the j loop runs for the value taken by e.g i=mid i,e i=1; j loop runs for 1 time; when i=2, j loop runs for 2 times i,e for locations [0] and [1]
+ therfore, if i=n-1, j will run for n-1 times. the comparison is made on the elements [j and j+mid]
  for(i=mid;i<n;i++)  --------------> value of i is set to mid this loop iterates for the rightmost elements after mid
  for(j=i-mid;j>=0 && v[j]>v[j+mid];j-=mid) -------------->  this  loop iterates for the left most elements  before mid
  for every one iteration of i loop
