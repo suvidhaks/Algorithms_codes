@@ -75,7 +75,7 @@ void insertion_sort(int a[], int n)
         while(i>=0 && key<a[i])
         {
             a[i+1]=a[i]; //swap the two consecutive location values;
-           // a[i]=key;  acts as current pointer in the next iteration; (this statement can be avoided and the key can be placed in appropriate loc)
+           // a[i]=key;  acts as current pointer in the next iteration; (this statement can be avoided and the key can be placed in appropriate loc) with this we can reduce one memory acccess
             i--;  // now key is set to the current pointer and i-- points to previous location 
         }
         a[i+1]=key;
