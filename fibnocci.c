@@ -41,6 +41,14 @@ fib(6)= fib(4) + fib(5)
   ex: size(unsigned long int)=8B
   all [0-63] bits can be set to 1
   max decimal val=(2^64-1)
+  note that the complexity of the algorithm is exponential
+  i,e for every argument say the value of n is passed to the function 
+  the recursive call executes 
+  ex: n=1;
+  the function executes 2 times i,e 2^1=2 times;
+  n=2;
+  the function executes 2*2 times i,e powers of 2^2=4;
+  the exponential time complexity alg. consumes lots of time; hence it is considered to be inefficient;
   
 */
 
