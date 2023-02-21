@@ -36,7 +36,12 @@ fib(6)= fib(4) + fib(5)
          =13
          
          clear the stack
-      
+  
+  note that based on the size of unsigned long int thse many bits can be set
+  ex: size(unsigned long int)=8B
+  all [0-63] bits can be set to 1
+  max decimal val=(2^64-1)
+  
 */
 
 
