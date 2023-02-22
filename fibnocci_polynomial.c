@@ -1,6 +1,6 @@
 /*
 this program computes the fibnocci series upto n=92
-this algorithm takes polynomial time to compute the fib value of the nth term
+this algorithm takes linear time to compute the fib value of the nth term
 */
 
 #include <stdio.h>
