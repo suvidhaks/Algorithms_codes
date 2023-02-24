@@ -15,6 +15,13 @@ the loop is reduced from 10000 to 2500 ;
 though we ignore constants while defining function to measure the time complexity of alg. 
 when we take value for n and calculate the no. of times the loops run
 we can estimate the time taken;
+
+for any i value lesser than its divisorscan be found within the sqrt(n)
+ for(j=3;j<sqrt(i);j+=2)
+with this above loop 
+the complexity will be (n*sqrt(n))/4;
+e.x: n=100
+(100 * sqrt(100))/4 =250;
 */
 
 
@@ -28,7 +35,7 @@ int main()
    {
       
        flag=1;
-       for(j=3;j<i;j+=2)
+       for(j=3;j<i;j+=2) /*  for(j=3;j<sqrt(i);j+=2)*/
        {
            if(i%j==0)
            {
