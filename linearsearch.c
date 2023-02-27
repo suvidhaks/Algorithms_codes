@@ -57,3 +57,22 @@ void read(int a[], int n)
 }
 
 
+
+int linearsearch_O(int a[], int n, int x) // this piece of code works for big O(n) even if the key is found at first location still the code searches the key for entire n elements of an array; this is inefficient 
+{
+    int i,flag=-1;
+    
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==x)
+        {
+            flag= i;
+        }
+    }
+    
+    return flag;
+}
+
+
+
+
