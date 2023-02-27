@@ -6,6 +6,15 @@ say suppose the number of items in the array are n;
 and if the key is found at the loc [n-1];
 then time complexity requires O(n);
 therefore; we say the that linear search algorithm takes linear time 
+
+int sentinal_linearsearch(int a[], int n, int x) ;
+in this function; the last element at pos[n-1] is saved in the variable last;
+and key is placed in a[n-1];
+i=0;
+while(a[i]!=key)
+ i++;
+ restore last value at a[n-1]=last;
+ now if i<n-1 assuming that a[n-1]=key then n-1  loc must be displayed else the index i at which key is found must be displayed otherwise -1;
 */
 
 #include <stdio.h>
@@ -72,6 +81,27 @@ int linearsearch_O(int a[], int n, int x) // this piece of code works for big O(
     
     return flag;
 }
+
+
+
+int sentinal_linearsearch(int a[], int n, int x) 
+{
+    int i=0, last;
+    last=a[n-1];
+    a[n-1]=x;
+    
+    while(a[i]!=x)
+    {
+        i++;
+    }
+    
+    a[n-1]=last;
+   return (i<n-1)?i: (a[n-1]==x)?n-1:-1;
+      
+}
+
+
+
 
 
 
