@@ -38,7 +38,7 @@ int main()
 }
 
 
-int linearsearch(int a[], int n, int x)
+int linearsearch(int a[], int n, int x) /*better linearsearch; if the key is found at the initial loc it just returns the index and stops the loop*/
 {
     int i;
     
