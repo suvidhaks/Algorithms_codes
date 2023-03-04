@@ -45,7 +45,7 @@ t1.n + t11.n +t1 + t2.n +t2 +t3 + t0;
 
 (t1+t11+t2+t21).n + (t0+t11+t3) ------ upper bound //
 if you analyse lower bound and upper bound both are in the form of equation
-ax+b----------which is linear equation
+cn+d----------which is linear equation
 therefore we say that linear search takes linear time....
 f(n)=theta(n);
 c1.n<f(n)<=c2.n;
