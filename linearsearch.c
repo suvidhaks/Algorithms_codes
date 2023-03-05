@@ -50,6 +50,26 @@ therefore we say that linear search takes linear time....
 f(n)=theta(n);
 c1.n<f(n)<=c2.n;
 
+................................................................*****************************............................................................
+
+Better_linearsearch(int[], int n,int key)
+Alg: for i=1 to n
+       if (a[i]==key)
+         return i
+         
+ Best case: if the key is found at a[1];
+1. i=1 ---t1
+2  i<n ----t11 (time)
+3. a[i]==key ---t2 (time)
+4.  return i -----t21(time)
+
+all these above instructions are execued only once; therefore all the instructions are executed in time;
+1.t1+1.t11+1.t2+1.t21 
+1(t1+t11+t2+t21) belongs to theta(1) class;
+
+Worst case: key found at a[n]
+takes O(n)
+
 */
 
 
