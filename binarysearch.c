@@ -5,53 +5,64 @@ to minimize the number of iterations mid is calculated along with the 3-way deci
 the no. of iterations in this program will be minimized to n/2 iterations.
 */
 
-
 #include <stdio.h>
-#define limit 100
-
-int binarysearch(int [],int,int);
+#define MAX 100
+int binarysearch(int [], int , int);
+void read(int [], int);
 int main()
 {
-  
- int a[limit], key,i,bin,n;
- int j=1;
- printf("enter n value");
- scanf("%d", &n);
- for(i=0;i<n;i++)
- {
-     a[i]=j*10;
-     
-     printf("%d%c",a[i],   (j%10==0)?'\n':' ');
-     j++;
- }
- 
-  printf("\nenter key value");
- scanf("%d", &key);
- 
- bin=binarysearch(a,n,key);
-   printf("\n key found at pos=%d", bin);
+    int a[MAX];
+    int i,n,key;
+    printf("\nenter n and key value");
+    scanf("%d%d", &n, &key);
+    read(a,n);
+   i= binarysearch(a,n,key);
+   printf("\n%d", i);
+
     return 0;
 }
 
-int binarysearch(int a[], int n,int key)
+
+int binarysearch(int a[], int n, int key)
 {
-    int i=0;
-    int low=0,high, mid;
+    int low, high, mid;
+    low=0;
     high=n-1;
     while(low<=high)
     {
         mid=(low+high)/2;
-        if(key<a[mid])
+        if(key==a[mid])
         {
-            high=mid-1;    
+            return mid;
         }
-         else if(key>a[mid])
+       else if(key<a[mid])
         {
-            low=mid+1;    
+            high=mid-1;
         }
-        else
-          return mid;
+        else if(key>a[mid])
+        {
+            low=mid+1;
+        }
+        
+       
     }
     
-    return -1;
+   return -1; 
 }
+
+
+void read(int a[], int n)
+{
+    
+    int i;
+    printf("enter array elements");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    return ;
+}
+
+
+
+
