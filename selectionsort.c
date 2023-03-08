@@ -32,7 +32,7 @@ void selectionsort(int a[], int n)
           if(a[j]<a[smallest])
               smallest=j;
       }
-      if(smallest>i)
+      if(smallest>i)     // this branching test is used to minimize the swap operations ; assuming that n/4 elements are in sorted fashion when n elements are entered;
       {
           temp=a[smallest];
           a[smallest]=a[i];
