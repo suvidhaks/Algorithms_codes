@@ -45,6 +45,10 @@ return {max(a[0],max_value)} ; max(6,6)
 return value =6;
 
 
+Note: In recursion; the only concern will be the stack memory;
+therefore,the depth of the stack will be of array size; i,e if array_size=n;
+then depth of the stack will be n.
+
 */
 
 //---------------------------------------------------------------------------------------------------*****--------------------------
