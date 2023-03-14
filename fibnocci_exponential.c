@@ -51,7 +51,7 @@ fib(6)= fib(4) + fib(5)
   the function executes 2*2 times i,e powers of 2^2=4;
   the exponential time complexity alg. consumes lots of time; hence it is considered to be inefficient;
   
-  the depth of the stack =2^n ; stack grows exponentially; 
+  the depth of the stack =2^ciel(n/2) ; stack grows exponentially; 
   
 */
 
