@@ -1,3 +1,9 @@
+/*
+Implemenatation of
+Merge sort Algorithm by Thomas H Coremen in C programming.
+
+*/
+
 #include <stdio.h>
 #define max 100
 
