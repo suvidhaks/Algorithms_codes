@@ -1,5 +1,6 @@
 /*
 the following code uses repeated square method to find the modular exponent
+Note: this code works only for the values of y which are in the powers of 2 for y is even and if y is odd te value should be even vale of y+1;
 ex: y=16; y/2=8;
 2^8 mod 100=56;
 2^4 mod 100= 16; 2^2 mod 100= 4; 2^1 mod 100= 2; 2^0=1 return from function();
