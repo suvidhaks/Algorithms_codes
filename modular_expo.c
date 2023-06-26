@@ -10,33 +10,41 @@ y/2=16;
 repeat above steps 
 */
 
-
 #include <stdio.h>
-
-int  modularexpo(int,int,int);
-
+#include<math.h>
+int modularexp(int x, int y, int n);
 int main()
 {
-    int z;
-    z= modularexpo(2,17,100);
-    printf("%d", z);
+  
+  int z, x, y, n;
+  printf("enter the values");
+  scanf("%d%d%d", &x,&y,&n);
+   z=modularexp( x,  y,  n);    
+   printf("\n%d", z);
     return 0;
 }
 
-int  modularexpo(int x,int y,int N)
+
+int modularexp(int x, int y, int n)
 {
-    int z;
+    
+    int z, ans;
+    ans=y;
     if(y==0)
-     return 1;
-    else if(y%2==0)
     {
-        z=modularexpo(x,y/2,N);
-        return ((z*z) % N);
+        return 1;
+    }
+    z=modularexp( x,  y/2,  n);
+    if(ans%2==0)
+    {
+        return (z*z % n);
     }
     else
     {
-         z=modularexpo(x,y/2,N);
-        return (2*(z*z) % N);
+        return (x*z*z % n);
     }
-    
 }
+
+
+
+   
